@@ -1,0 +1,6 @@
+apiVersion: "cadumillani.com.br/v1"
+kind: Printer
+metadata:
+  name: print-hello-world
+spec:
+  textToPrint: "Hello Kube!"
