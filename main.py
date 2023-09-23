@@ -5,7 +5,7 @@ import string
 # Configs can be set in Configuration class directly or using helper utility
 config.load_kube_config()
 
-NAMESPACE = "jupyterhub"
+NAMESPACE = "techtalk"
 CRD_NAME_PLURAL = "printers"
 CRD_KIND = "Printer"
 CRD_GROUP = "cadumillani.com.br"
