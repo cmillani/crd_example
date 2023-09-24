@@ -12,7 +12,19 @@ kubectl apply -f crd.yaml
 
 # you should use a venv before running the steps bellow
 pip install -r requirements.txt # update kubernetes version according to your cluster
-python main.py
+```
+
+To run without a framework: 
+> Folder **no-framework** shows an example of building an operator with only the kubernetes library.
+In most cases it is pretty simple, but guaranteeing that all resources are watched is not as simple as demonstrated on this example, since old resources are not returned by the code showed (in the version of kubernetes and library used for the tests in 2022);
+```sh
+python no-framework/main.py
+```
+
+To run with `kopf` framework
+> Folder **framework** demonstrates using kopf to make things a little easier!
+```sh
+kopf run framework/main.py --verbose
 ```
 
 The above code will start listening for any resources. **On another shell**:

@@ -23,8 +23,9 @@ spec:
                 textToPrint:
                   type: string
             status:
-              type: string
-              default: 'pending'
+              type: object
+              x-kubernetes-preserve-unknown-fields: true
+              default: {'current':'pending'}
       subresources:
         # status enables the status subresource.
         status: {}
